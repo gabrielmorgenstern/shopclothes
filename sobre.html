@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Anton SC', sans-serif;
+            display: flex;
+            margin: 0;
+            min-height: 100vh;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+		section{
+			text-align:  center;
+		}
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            right: 0;
+            overflow: hidden;
+        }
+        .sidebar img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .main-content {
+            margin-right: 200px;
+            flex-grow: 1;
+            padding: 20px;
+        }
+        header, section, footer {
+            margin-bottom: 20px;
+        }
+        header {
+            background-color: #FFC745;
+            width: 100%;
+        }
+        footer {
+            background: #FFC745;
+            width: calc(100% - 200px);
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            right: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <header>
+            <table style="width: 100%; text-align: center;">
+                <tr>
+                    <th style="font-size:30px"><a href="index.html">Inicio</a></th>
+                    <th style="font-size:30px"><a href="contatos.html">Contatos</a></th>
+                    <th style="font-size:30px"><a href="sobre.html">Sobre</a></th>
+                </tr>
+            </table>
+        </header>
+        <section>
+            <h1>Inicio da Nossa Historia.</h1>
+			<p>
+			Há 15 anos, Juan teve uma visão e uma paixão pelo mundo da moda. Foi na garagem de sua casa que ele decidiu dar o primeiro passo para transformar seu sonho em realidade. Com poucas peças de roupas e muita determinação, ele começou a vender para amigos e vizinhos, sempre com o objetivo de oferecer produtos de qualidade e um atendimento diferenciado.
+A garagem logo se tornou pequena para a quantidade de clientes que procuravam pelas suas roupas. Juan então abriu sua primeira loja física, que rapidamente se tornou um ponto de referência na região. Ao longo dos anos, a loja cresceu, expandiu e conquistou uma clientela fiel, sempre mantendo os valores de qualidade, inovação e proximidade com os clientes.
+Hoje, após uma trajetória de sucesso e muitas conquistas, estamos dando mais um grande passo: a entrada no mundo digital. Com a mesma paixão e compromisso de sempre, estamos trazendo nossos produtos para você, onde quer que esteja. Agradecemos a todos que fizeram parte dessa jornada e convidamos você a continuar conosco nessa nova fase.
+</p>
+		<audio autoplay controls="true">
+		<source src="audio\audioleitura.mp3" type="audio/mpeg">
+		Seu navegador não suporta o elemento de áudio.
+		</audio>
+		<p>Nossa loja se orgulha em oferecer roupas de alta qualidade para todos os estilos e gostos. Trabalhamos com dedicação para trazer o melhor da moda masculina e feminina, sempre priorizando o conforto e a elegância.
+Cada peça de roupa é cuidadosamente selecionada para refletir as últimas tendências, garantindo que você esteja sempre bem-vestido(a) para qualquer ocasião. Nosso compromisso é proporcionar uma experiência de compra única, com roupas que valorizam a individualidade e o estilo pessoal de cada cliente.
+Seja para uma ocasião especial ou para o dia a dia, nossas roupas são feitas para realçar o melhor de você. Descubra a nossa coleção e encontre o que há de melhor na moda masculina e feminina.</p>
+        </section>
+        <footer>Todos os Direitos Reservados ©</footer>
+    </div>
+    <div class="sidebar">
+        <img src="imagens\anuncio.jpg" alt="Imagem Lateral">
+    </div>
+</body>
+</html>

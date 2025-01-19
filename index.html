@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Anton SC', sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        header {
+            background-color: #FFC745;
+        }
+
+        th {
+            font-size: 25px;
+        }
+
+        td {
+            font-size: 25px;
+        }
+
+        footer {
+            background: #FFC745;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slider-container {
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slide {
+            min-width: 100%;
+            transition: 0.5s;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #555;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .products {
+            text-align: center;
+            width: 100%;
+        }
+
+        .products table {
+            width: 100%;
+            text-align: center;
+        }
+
+        .products img {
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <table width="100%">
+            <tr>
+                <th style="font-size:30px"><a href="index.html">Inicio</a></th>
+                <th style="font-size:30px"><a href="contatos.html">Contatos</a></th>
+                <th style="font-size:30px"><a href="sobre.html">Sobre</a></th>
+            </tr>
+        </table>
+    </header>
+    
+    <div class="content">
+        <section>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide"><img src="imagens\slider1.png" alt="Imagem 1"></div>
+                    <div class="slide"><img src="imagens\slider2.png" alt="Imagem 2"></div>
+                    <div class="slide"><img src="imagens\slider3.png" alt="Imagem 3"></div>
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()"> &#10095;</button>
+            </div>
+        </section>
+
+        <section class="products">
+            <table>
+                <tr>
+                    <th>Kimono Cardigan Feminino<img src="imagens\produto1.png" alt="Produto 1" onclick="openModal()"></th>
+                    <th>Calça Jeans Feminina Wild Leg<img src="imagens\produto2.png" alt="Produto 2" onclick="openModal()"></th>
+                    <th>Conjunto Pantalona Camisa sem Mangas<img src="imagens\produto3.png" alt="Produto 3" onclick="openModal()"></th>
+                    <th>Trico yong Kimono cardigan Feminino<img src="imagens\produto4.png" alt="Produto 4" onclick="openModal()"></th>
+                </tr>
+                <tr>
+                    <th>A vista</th>
+                    <th>A Vista</th>
+                    <th>A vista</th>
+                    <th>A vista</th>
+                </tr>
+                <tr>
+                    <td>R$ 19,90</td>
+                    <td>R$ 89,90</td>
+                    <td>R$ 24,90</td>
+                    <td>R$ 19,90</td>
+                </tr>
+            </table><br><br>
+            <table>
+                <tr>
+                    <th>Blusa Manga Curta Listrada<img src="imagens\produto5.png" alt="Produto 5" onclick="openModal()"></th>
+                    <th>Calça Feminina Pantalona<img src="imagens\produto6.png" alt="Produto 6" onclick="openModal()"></th>
+                    <th>Camisa Masculina Pantera Cor de Rosa<img src="imagens\produto7.png" alt="Produto 7" onclick="openModal()"></th>
+                    <th>Camisa StreetWear Chico Moedas<img src="imagens\produto8.png" alt="Produto 8" onclick="openModal()"></th>
+                </tr>
+                <tr>
+                    <th>A vista</th>
+                    <th>A Vista</th>
+                    <th>A vista</th>
+                    <th>A vista</th>
+                </tr>
+                <tr>
+                    <td>R$ 27,99</td>
+                    <td>R$ 69,90</td>
+                    <td>R$ 32,90</td>
+                    <td>R$ 99,90</td>
+                </tr>
+            </table><br><br>
+            <table>
+                <tr>
+                    <th>Calça Cargo Masculina<img src="imagens\produto9.png" alt="Produto 9" onclick="openModal()"></th>
+                    <th>Short Liso<img src="imagens\produto10.png" alt="Produto 10" onclick="openModal()"></th>
+                    <th>Corta vento Masculina<img src="imagens\produto11.png" alt="Produto 11" onclick="openModal()"></th>
+                    <th>Camisa Noite Estrelada<img src="imagens\produto12.png" alt="Produto 12" onclick="openModal()"></th>
+                </tr>
+                <tr>
+                    <th>A vista</th>
+                    <th>A Vista</th>
+                    <th>A vista</th>
+                    <th>A vista</th>
+                </tr>
+                <tr>
+                    <td>R$ 27,99</td>
+                    <td>R$ 69,90</td>
+                    <td>R$ 32,90</td>
+                    <td>R$ 99,90</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+	<section>
+		<p style="font-size: 30px;">Formas de Pagamentos</p>
+		<img src= "imagens\formasdepagamento.png">
+	</section>
+
+    <footer>Todos os Direitos Reservados ©</footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Formulário de Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="tel">Whatsapp:</label>
+                <input type="tel" id="tel" name="tel"><br><br>
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("myModal");
+        const img = document.querySelectorAll(".products img");
+        const span = document.getElementsByClassName("close")[0];
+
+        img.forEach(image => {
+            image.onclick = function() {
+                modal.style.display = "block";
+            }
+        });
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(${-slideIndex * 100}%)`;
+            }
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
