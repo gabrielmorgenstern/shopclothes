@@ -27,12 +27,26 @@
             background-color: #FFC745;
         }
 
-        th {
-            font-size: 25px;
+        header table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        td {
-            font-size: 25px;
+        header th {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            header table {
+                display: block;
+            }
+
+            header th {
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
         }
 
         footer {
@@ -67,7 +81,7 @@
         }
 
         .slide img {
-            width: 100%;
+            max-width: 100%;
             height: auto;
         }
 
@@ -105,10 +119,48 @@
             text-align: center;
         }
 
+        .products td, .products th {
+            text-align: center;
+        }
+
         .products img {
-            width: 400px;
-            height: 400px;
+            width: 100%;
+            max-width: 250px;
+            height: auto;
             cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .products th {
+            padding-bottom: 10px;
+        }
+
+        .products td {
+            padding: 20px 10px;
+        }
+
+        @media (max-width: 768px) {
+            .products table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .products td, .products th {
+                width: 100%;
+            }
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
         }
 
         .modal {
@@ -120,8 +172,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
             padding-top: 60px;
         }
 
@@ -130,7 +181,7 @@
             margin: 5% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 90%;
             max-width: 500px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             animation-name: animatetop;
@@ -159,7 +210,7 @@
 </head>
 <body>
     <header>
-        <table width="100%">
+        <table>
             <tr>
                 <th style="font-size:30px"><a href="index.html">Inicio</a></th>
                 <th style="font-size:30px"><a href="contatos.html">Contatos</a></th>
@@ -172,9 +223,9 @@
         <section>
             <div class="slider-container">
                 <div class="slider">
-                    <div class="slide"><img src="imagens\slider1.png" alt="Imagem 1"></div>
-                    <div class="slide"><img src="imagens\slider2.png" alt="Imagem 2"></div>
-                    <div class="slide"><img src="imagens\slider3.png" alt="Imagem 3"></div>
+                    <div class="slide"><img src="imagens/slider1.png" alt="Imagem 1"></div>
+                    <div class="slide"><img src="imagens/slider2.png" alt="Imagem 2"></div>
+                    <div class="slide"><img src="imagens/slider3.png" alt="Imagem 3"></div>
                 </div>
                 <button class="prev" onclick="prevSlide()">&#10094;</button>
                 <button class="next" onclick="nextSlide()"> &#10095;</button>
@@ -184,10 +235,10 @@
         <section class="products">
             <table>
                 <tr>
-                    <th>Kimono Cardigan Feminino<img src="imagens\produto1.png" alt="Produto 1" onclick="openModal()"></th>
-                    <th>Calça Jeans Feminina Wild Leg<img src="imagens\produto2.png" alt="Produto 2" onclick="openModal()"></th>
-                    <th>Conjunto Pantalona Camisa sem Mangas<img src="imagens\produto3.png" alt="Produto 3" onclick="openModal()"></th>
-                    <th>Trico yong Kimono cardigan Feminino<img src="imagens\produto4.png" alt="Produto 4" onclick="openModal()"></th>
+                    <th>Kimono Cardigan Feminino<img src="imagens/produto1.png" alt="Produto 1" onclick="openModal()"></th>
+                    <th>Calça Jeans Feminina Wild Leg<img src="imagens/produto2.png" alt="Produto 2" onclick="openModal()"></th>
+                    <th>Conjunto Pantalona Camisa sem Mangas<img src="imagens/produto3.png" alt="Produto 3" onclick="openModal()"></th>
+                    <th>Trico yong Kimono cardigan Feminino<img src="imagens/produto4.png" alt="Produto 4" onclick="openModal()"></th>
                 </tr>
                 <tr>
                     <th>A vista</th>
@@ -204,10 +255,10 @@
             </table><br><br>
             <table>
                 <tr>
-                    <th>Blusa Manga Curta Listrada<img src="imagens\produto5.png" alt="Produto 5" onclick="openModal()"></th>
-                    <th>Calça Feminina Pantalona<img src="imagens\produto6.png" alt="Produto 6" onclick="openModal()"></th>
-                    <th>Camisa Masculina Pantera Cor de Rosa<img src="imagens\produto7.png" alt="Produto 7" onclick="openModal()"></th>
-                    <th>Camisa StreetWear Chico Moedas<img src="imagens\produto8.png" alt="Produto 8" onclick="openModal()"></th>
+                    <th>Blusa Manga Curta Listrada<img src="imagens/produto5.png" alt="Produto 5" onclick="openModal()"></th>
+                    <th>Calça Feminina Pantalona<img src="imagens/produto6.png" alt="Produto 6" onclick="openModal()"></th>
+                    <th>Camisa Masculina Pantera Cor de Rosa<img src="imagens/produto7.png" alt="Produto 7" onclick="openModal()"></th>
+                    <th>Camisa StreetWear Chico Moedas<img src="imagens/produto8.png" alt="Produto 8" onclick="openModal()"></th>
                 </tr>
                 <tr>
                     <th>A vista</th>
@@ -224,10 +275,10 @@
             </table><br><br>
             <table>
                 <tr>
-                    <th>Calça Cargo Masculina<img src="imagens\produto9.png" alt="Produto 9" onclick="openModal()"></th>
-                    <th>Short Liso<img src="imagens\produto10.png" alt="Produto 10" onclick="openModal()"></th>
-                    <th>Corta vento Masculina<img src="imagens\produto11.png" alt="Produto 11" onclick="openModal()"></th>
-                    <th>Camisa Noite Estrelada<img src="imagens\produto12.png" alt="Produto 12" onclick="openModal()"></th>
+                    <th>Calça Cargo Masculina<img src="imagens/produto9.png" alt="Produto 9" onclick="openModal()"></th>
+                    <th>Short Liso<img src="imagens/produto10.png" alt="Produto 10" onclick="openModal()"></th>
+                    <th>Corta vento Masculina<img src="imagens/produto11.png" alt="Produto 11" onclick="openModal()"></th>
+                    <th>Camisa Noite Estrelada<img src="imagens/produto12.png" alt="Produto 12" onclick="openModal()"></th>
                 </tr>
                 <tr>
                     <th>A vista</th>
@@ -244,10 +295,11 @@
             </table>
         </section>
     </div>
-	<section>
-		<p style="font-size: 30px;">Formas de Pagamentos</p>
-		<img src= "imagens\formasdepagamento.png">
-	</section>
+
+    <section>
+        <p style="font-size: 30px;">Formas de Pagamentos</p>
+        <img src="imagens/formasdepagamento.png">
+    </section>
 
     <footer>Todos os Direitos Reservados ©</footer>
 
@@ -270,15 +322,13 @@
     <script>
         const modal = document.getElementById("myModal");
         const img = document.querySelectorAll(".products img");
-        const span = document.getElementsByClassName("close")[0];
+        const close = document.querySelector(".close");
 
-        img.forEach(image => {
-            image.onclick = function() {
-                modal.style.display = "block";
-            }
-        });
+        function openModal() {
+            modal.style.display = "block";
+        }
 
-        span.onclick = function() {
+        close.onclick = function() {
             modal.style.display = "none";
         }
 
@@ -290,30 +340,29 @@
 
         let slideIndex = 0;
 
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
-            if (index >= slides.length) {
-                slideIndex = 0;
-            } else if (index < 0) {
-                slideIndex = slides.length - 1;
-            } else {
-                slideIndex = index;
-            }
-
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
             for (let i = 0; i < slides.length; i++) {
-                slides[i].style.transform = `translateX(${-slideIndex * 100}%)`;
+                slides[i].style.display = "none";
             }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
         }
 
         function nextSlide() {
-            showSlide(slideIndex + 1);
+            slideIndex++;
+            showSlides();
         }
 
         function prevSlide() {
-            showSlide(slideIndex - 1);
+            slideIndex--;
+            showSlides();
         }
 
-        showSlide(slideIndex);
+        setInterval(showSlides, 2000); // Muda de slide a cada 2 segundos
     </script>
 </body>
 </html>
